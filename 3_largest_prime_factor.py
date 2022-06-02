@@ -18,7 +18,6 @@ def primeFactor(given):
     while given % number == 0:
       factors.append(number)
       given = given / number
-  
 
   # If given number is prime
   if given > 2:
