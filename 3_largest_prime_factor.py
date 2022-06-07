@@ -8,22 +8,23 @@ import math
 def primeFactor(given):
   factors = []
 
-  # Find factors of 2
+  # Find all factors of 2
   while given % 2 == 0:
     given = given / 2
     factors.append('2')
   
-  # Remaining number is now odd
+  # Remaining number is now odd and we iterate upward through only odd no's.
   for number in range(3, int(math.sqrt(given))+1, 2):
     while given % number == 0:
       factors.append(number)
       given = given / number
 
-  # If given number is prime
+  # If remainder or the original is prime
   if given > 2:
     factors.append(given)
-  return factors
+  
 
+  return factors
 
 
 #Driver (Gives largest prime only)

@@ -6,6 +6,7 @@
 
 
 # Palindrome checker function can accept string or integer input.
+
 def is_palindrome(n):
   n_arr = [int(i) for i in str(n)]
   return n_arr == n_arr[::-1]
