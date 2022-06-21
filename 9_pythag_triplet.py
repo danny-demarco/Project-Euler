@@ -33,7 +33,7 @@ def findTriplet(n):
     b = n*(n-2*a) // (2*(n-a))
     c = n - a - b
     if a < b and a*a + b*b == c*c:
-      return (a, b, c)
+      return (a*b*c)
   return triplet
 
 print(findTriplet(1000))
