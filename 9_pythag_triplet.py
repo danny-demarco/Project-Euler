@@ -18,12 +18,11 @@ import timeit as t
 testcode = '''
 def findTriplet(n):
   triplet = None
-  for a in range(n//3, 1, -1):
+  for a in range(n//3-1, 2, -1):
     b = n*(n-2*a) // (2*(n-a))
     c = n - a - b
     if a < b and a*a + b*b == c*c:
-      triplet = (a, b, c)
-      break
+      return (a, b, c)
   return triplet
 '''
 
@@ -34,8 +33,7 @@ def findTriplet(n):
     b = n*(n-2*a) // (2*(n-a))
     c = n - a - b
     if a < b and a*a + b*b == c*c:
-      triplet = (a, b, c)
-      break
+      return (a, b, c)
   return triplet
 
 print(findTriplet(1000))
